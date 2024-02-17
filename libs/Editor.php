@@ -148,7 +148,7 @@ function article_changetext($post, $login){
     ));
     $content = preg_replace('/{{([\s\S]*?)}{([\s\S]*?)}}/', '<span class="e" title="${2}">${1}</span>' , $content);
     $content = preg_replace('/{bili p="([\s\S]*?)" key="([\s\S]*?)"}/', '<article_video><iframe src="https://www.bilibili.com/blackboard/html5mobileplayer.html?bvid=${2}&amp;page=${1}&amp;as_wide=1&amp;danmaku=0&amp;hasMuteButton=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe></article_video>', $content);
-    $content = preg_replace('/<img src([\s\S]*?)title="([\s\S]*?)">/', '<post_image><img src="' . get_Lazyload() . '" class="postimg isfancy lazyload" data-src${1}></post_image>', $content);
+    $content = preg_replace('/<img src([\s\S]*?)title="([\s\S]*?)">/', '<post_image><img src${1} class="postimg isfancy lazyload" data-src${1}></post_image>', $content);
     $content = preg_replace('/<p><post_image([\s\S]*?)<\/post_image><\/p>/', '<post_image${1}</post_image>', $content);
     $content = preg_replace('/<img src="(.*?)" class="(.*?)" data-src="(.*?)" alt="(.*?)"(.*?)>/', '<span data-fancybox="gallery" data-caption="${4}" href="${3}"><img src="${1}" class="${2}" data-src="${3}" alt="${4}"></span>', $content);
     $content = preg_replace('/{time}([\s\S]*?){\/time}/', '<div class="time"><span>${1}</span></div>', $content);
