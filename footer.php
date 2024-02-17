@@ -27,7 +27,7 @@
 <!-- lib -->
 <script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="<?php staticFiles('js/lib/md-toc.min.js') ?>"></script>
-<script src="<?php staticFiles('lib/prism/prism.min.js'); ?>"></script>
+<script src="<?php staticFiles('lib/prism/prism.min.js'); ?>" class="S_pjax"></script>
 <!-- main -->
 <script src="<?php staticFiles('js/core.min.js') ?>"></script>
 <script src="<?php staticFiles('js/theme.min.js') ?>"></script>
